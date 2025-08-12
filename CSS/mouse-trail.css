@@ -1,0 +1,9 @@
+canvas#sparklesCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* important so canvas doesn’t block clicks */
+    z-index: 9999;
+}

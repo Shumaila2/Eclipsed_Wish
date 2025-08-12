@@ -1,0 +1,66 @@
+#wish-wall-section {
+    padding: 30px;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 2px dashed #3a7da3;
+}
+#wish-wall-section h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #07588a;
+    text-shadow: 0 0 5px rgba(7, 88, 138, 0.5);
+}
+
+#wish-wall-section p {
+    font-family: 'Fredoka', sans-serif;
+    color: #07588a;
+    text-shadow: 0 0 5px rgba(7, 88, 138, 0.5);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+#wish-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.wish {
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    color: #07588a;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0 0 6px rgba(105, 179, 240, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+    word-wrap: break-word;
+}
+
+#wish-input-box {
+    margin-top: 20px;
+}
+
+#wish-input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#add-wish-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #69B3F0;
+    color: white;
+    margin-left: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

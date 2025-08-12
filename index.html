@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY!</title>
+    
+    <!--Favicon-->
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+    <!--Main CSS-->
+    <link rel="stylesheet" href="CSS/main.css">
+
+    <!--Background CSS-->
+    <link rel="stylesheet" href="CSS/background.css">
+
+    <!--Wind CSS-->
+    <link rel="stylesheet" href="CSS/wind.css">
+    
+    <!--Scroll Snap Carousel-->
+    <link rel="stylesheet" href="CSS/carousel.css">   
+
+    <!--Flip Card-->
+    <link rel="stylesheet" href="CSS/flip-card.css">
+
+    <!--Count CSS-->
+    <link rel="stylesheet" href="CSS/count.css">
+
+    <!--Butterfly CSS-->
+    <link rel="stylesheet" href="CSS/butterfly.css">
+
+    <!--Puzzle CSS-->
+    <link rel="stylesheet" href="CSS/puzzle.css">
+
+    <!--Mouse Trail CSS-->
+    <link rel="stylesheet" href="CSS/mouse-trail.css">
+
+    <!--Music Player CSS-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="CSS/music.css">
+
+    <!--Scroll Joke CSS-->
+    <link rel="stylesheet" href="CSS/scroll-joke.css">
+
+    <!--Wishing Wall CSS-->
+    <link rel="stylesheet" href="CSS/wishing-wall.css">
+
+    <!--Footer CSS-->
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fredoka:wght@300..700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    
+    <!--Bootstrap CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+
+    <!--Mouse Trail-->
+    <canvas id="sparklesCanvas"></canvas>
+
+    <div class="page-content">
+        <!--Header Section-->
+        <div class="container mb-5 pd-5">
+
+            <!--Heading Section-->
+            <div class="row">
+                <div class="col-lg-7 col-md-9 mx-auto text-center mt-5">
+                    <!--Jolly Questday Stindle Bllah!-->
+                    <h1 id="page-heading" class="text-light" style="font-family: DynaPuff;">Happy Birthday Sibghat Ullah!</h1>
+                    <div class="wind-wrapper">
+                        <div class="frame"></div>
+                        <div class="circle"></div>
+                        <div class="center">
+                            <svg stroke="#fff" width="400px" height="400px" viewBox="0 0 400 400" version="1.1" class="line">
+                                <path class="st0" d="M-34.8,166.8c51.6,1.9,70.9,16.4,78.4,30.3c10.9,20.1-3.6,37.5,6.9,75c3.9,14,11.8,42.2,33.7,50.9
+                                    c25.7,10.2,65.3-8.7,76.4-36.5c13.8-34.4-26.4-57.5-19.3-110.1c3.3-24.1,17.1-58.7,44.7-67.4c34.9-10.9,84.3,21.7,90.8,65.4
+                                    c5.3,36-20.6,66.1-42.6,79.8c-39.5,24.5-95.7,14.9-108-7.6c-0.5-0.9-7.9-14.7-2.1-22.7c3.7-5,10.9-5.4,13.1-5.5
+                                    c15.4-0.8,28.1,12.1,33,17.2c46.5,48.5,53.9,63.9,72.2,75.7c24.1,15.6,66.1,24.2,90.8,6.9c36.4-25.5,7.6-88,49.5-130.7
+                                    c17.6-17.9,40-24.6,56.4-27.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Heading Section-->
+
+            <!--Carousel Section-->
+            <div class="row" id="carousel-container">
+                <div class="scrollbar-wrapper">
+                    <div class="scrollsnap-carousel">
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-1.png" alt="Slide 1" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-2.png" alt="Slide 2" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-3.png" alt="Slide 3" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-4.png" alt="Slide 4" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-5.png" alt="Slide 5" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-6.png" alt="Slide 6" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-7.png" alt="Slide 7" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="content-wrapper">
+                                    <img src="img/slide-8.png" alt="Slide 8" width="100%" height="100%" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Carousel Section-->
+        </div>
+        <!--End of Header Section-->
+        
+        <!--Body Section-->
+        <div class="container mt-5">
+
+            <!--Fun Section-->
+            <div class="row">
+                <!--Flip Card-->
+                <div class="col-6" id="flip-card">
+                    <div class="card">
+                        <div class="imgBox">
+                            <div class="bark"></div>
+                            <img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+                        </div>
+                        <div class="details">
+                            <h4 class="color1">You're not a Fossil! (YET)</h4>
+                            <h4 class="color2 margin">(HAPPY BIRTHDAY)</h4>
+                            <p>Dear Mitsu,</p>
+                            <p>Somewhere between fairy dust</p>
+                            <p>and my random overthinking hours,</p>
+                            <p>you showed up without a map,</p>
+                            <p>turned logic upside down,</p>
+                            <p>and made the sky feel like it mattered.</p>
+                            <p>Now sparkles float like they belong.</p>
+                            <p>You’re the chapter that changed it all.</p>
+                            <p class="text-right">Happy Birthday, cartoon!</p>
+                            <p class="text-right">♥Shuu</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Flip Card-->
+
+                <!--Couting-->
+                <div class="col-lg-6 col-md-6">
+                    <div id="counting">
+                        <h1 class="counter" data-count-end="5201314">0</h1>
+                        <p class="secret-line" style="font-family: Fredoka, sans-serif;">Here’s a number that holds a secret...</p>
+                        <button class="btn-restart">Reveal the Magic 💖</button>
+                    </div>
+                </div>
+                <!--End of Couting-->
+            </div>
+            <!--End of Fun Section-->
+
+            <!--Butterfly Section-->
+            <div class="col-lg-12 col-md-12 text-center" id="butterfly-section">
+                <div class="scene">
+                    <div class="butterfly" style="--random: 0.73428;"></div>
+                    <div class="butterfly" style="--random: 0.82130;"></div>
+                    <div class="butterfly" style="--random: 0.46092;"></div>
+                    <div class="butterfly" style="--random: 0.05981;"></div>
+                    <div class="butterfly" style="--random: 0.20235;"></div>
+                    <div class="butterfly" style="--random: 0.91763;"></div>
+                    <div class="butterfly" style="--random: 0.34480;"></div>
+                    <div class="butterfly" style="--random: 0.27659;"></div>
+                    <div class="butterfly" style="--random: 0.08087;"></div>
+                    <div class="butterfly" style="--random: 0.66670;"></div>
+                    <div class="butterfly" style="--random: 0.39124;"></div>
+                    <div class="butterfly" style="--random: 0.15907;"></div>
+                    <div class="butterfly" style="--random: 0.13729;"></div>
+                </div>
+            </div>
+            <!--End of Butterfly Section-->
+            
+            <!--Puzzle Section-->
+            <section class="animation-section collapsed" id="puzzle-wrapper">
+                    <!-- New Animation Scene -->
+                    <div class="animation-scene">
+                        <div class="question-container">
+                            <h1 id="question-text">Wanna see how you magically appeared in my world?</h1>
+                            <div class="button-container">
+                                <button id="yes-btn">Yes!</button>
+                                <button id="no-btn">No!</button>
+                            </div>
+                            <div class="puzzle-decor floating-quote">
+                                <p>“And so, the silence shaped the sky...”</p>
+                            </div>
+                            <div id="response-text" class="response-text"></div>
+                        </div>
+                        
+                        <div class="object-container">
+                            
+                            <div id="sad-object" class="sad-object"></div>
+                            <div id="explosion" class="explosion"></div>
+                            <div id="glowing-object" class="glowing-object"></div>
+                        </div>
+                        <div id="paragraph-text" class="paragraph-text">
+                            Before you, my life was like a quiet, wilted rose 🥀 — delicate, but fading. Then, out of nowhere, you came like a burst of light ☄️… crashing into my world 🌍. And in a blink — boom 💥 — everything changed. The darkness faded 🌫️. You brought light ✨, laughter 😁, color 🧡, and warmth 🔥. Just like that puzzle 🧩 you see there… every scattered piece began to make sense. You didn’t just arrive 🚪. You didn’t just fit in — you completed the picture 🖼️ I never knew was unfinished. Now, every part of this world feels alive 🌈, every moment feels warmer ☀️, and every piece… tells your story 📖. Somewhere between your jokes 😜, chaos 🎭, and kindness 💫 — I forgot what loneliness felt like. You made the ordinary feel rare 🌟. Even the silence feels full now 🕊️. And sometimes, I wonder… how did something so random become the best thing that ever happened to me? 💖
+                        </div>
+                    </div>
+
+                    <!--Puzzle-->
+                    <div class="puzzle-section">
+                        <svg viewBox="0 0 1 1">
+                        <defs>
+                            <clipPath id="puzzle" clipPathUnits="objectBoundingBox">
+                            <path d="M0 0.7763157894736841H0.23684210526315788C0.3289473684210526 0.7763157894736841 0.35526315789473684 0.7236842105263157 0.2894736842105263 0.6578947368421053 0.22368421052631576 0.5921052631578947 0.3157894736842105 0.5526315789473684 0.39473684210526316 0.5526315789473684 0.47368421052631576 0.5526315789473684 0.5657894736842105 0.5921052631578947 0.5 0.6578947368421053 0.43421052631578944 0.7236842105263157 0.4605263157894737 0.7763157894736841 0.5526315789473684 0.7763157894736841H0.7763157894736842V0.5526315789473684C0.7763157894736842 0.4605263157894737 0.8289473684210525 0.4342105263157894 0.894736842105263 0.5 0.9605263157894737 0.5657894736842106 1 0.4736842105263157 1 0.39473684210526305 1 0.3157894736842106 0.9605263157894737 0.2236842105263157 0.894736842105263 0.2894736842105263 0.8289473684210525 0.3552631578947367 0.7763157894736842 0.32894736842105265 0.7763157894736842 0.23684210526315796V0H0V0.7763157894736841Z"></path>
+                            </clipPath>
+                        </defs>
+                        </svg>
+
+                        <div class="grid">
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="item-container">
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                    <div class="piece"><div class="puzzle"></div></div>
+                                </div>
+                            </div>
+                            <div class="text-container"><span></span></div>
+                        </div>
+                        
+                    </div>
+            </section>
+            <!--End of Puzzle Section-->
+
+            <!--Music Player Section-->
+            <div class="row mt-5">
+                <!-- Button in the corner -->
+                <button id="music-button" title="Play Music"><img src="img/music-note-beamed.svg" alt=""></button>
+                <audio id="bg-music" loop>
+                <source src="img/button-music.MP3" type="audio/mpeg">
+                </audio>
+
+                <!-- Music Player -->
+                <div class="col-lg-12 col-md-12 col-sm-12"  id="music-player-section">
+                    <div class="album-cover">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                src="img/khaabon_k_parindy.png" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/fz5o2Dgj7R4"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="img/hbd_ji.jpeg" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/ZijyJX2HKqA"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="img/tu_hai_kiya.jpeg" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/bQZvcrN3XWE?si=6OQsC2IOn4lEFbsK"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="img/hbd_yaara.jpeg" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/-F-F2MKxh0w?si=2j8rY7Ao1YWR2cgx"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="img/jeena_jeena.jpeg" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/bB6ixWn-_w0?si=BXE-UoE3HFF5hbE5"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="img/pal.jpeg" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/97bFaxqvpnI?si=7ik2DRGOYw7mwHqc"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="img/phir kabhi.png" />
+                                <div class="overlay">
+                                <a
+                                    href="https://youtu.be/TWKPm2PIUWw?si=rmt2Y26O9zYLtRkX"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>                          
+
+                    <div class="music-player">
+                        <h1>Title</h1>
+                        <p>Song Name</p>
+
+                        <audio class="slider-audio" id="song">
+                            <source src="song-list/Luke-Bergs-Gold.mp3" type="audio/mpeg" />
+                        </audio>
+
+                        <input type="range" value="0" id="progress" />
+
+                        <div class="controls">
+                            <button class="backward">
+                            <i class="fa-solid fa-backward"></i>
+                            </button>
+                            <button class="play-pause-btn">
+                            <i class="fa-solid fa-play" id="controlIcon"></i>
+                            </button>
+                            <button class="forward">
+                            <i class="fa-solid fa-forward"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Music Player Section-->
+            
+            <!--Last Blcok Section-->
+            <div class="row">
+                <!--Scroll Joke Section-->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div id="joke-box">
+                        <div class="jokes" id="joke1">Your brain is that friend who says 'trust me' and&nbsp;then jumps into a swimming pool without water. 🧠😅</div>
+
+                        <div class="jokes" id="joke2" >You walk into a room like it’s a movie scene 🎬&nbsp;but trip on air like it’s a blooper reel. 🤣</div>
+                        
+                        <div class="jokes" id="joke3">If dumb decisions were a sport,&nbsp;your birthday would be the national holiday. 🎂🏆</div>
+
+                        <div class="jokes" id="joke4">Your presence feels like background music&nbsp;that suddenly turns into a jump scare. 😱</div>
+                        
+                        <div class="jokes" id="joke5">You’re like a GPS with no signal&nbsp;confidently wrong and leading us in circles. 🔄🤔</div>
+
+                        <div class="jokes" id="joke6">You’re that one Google search result&nbsp;no one clicks, but still shows up at the top. 🔍📉</div>
+
+                        <div class="jokes" id="joke7">You’re like autocorrect.&nbsp; Always there. Always wrong. 🤪</div> 
+                        
+                        <div class="jokes" id="joke8">Happy birthday to someone who proves daily 😊&nbsp; that common sense is just a suggestion. 😏</div>
+
+                        <div class="jokes" id="joke9">You’re the only person who could lose at hide-and-seek...&nbsp; in a room with glass walls. 😂😂</div>
+                        
+                        <div class="jokes" id="joke10">You were definitely born to stand out... 😍&nbsp; like a typo in a love letter. ✍️💌</div>
+
+                        <div class="jokes" id="joke11">You’re like a software update on a birthday&nbsp; unexpected, unnecessary, and now everything’s crashing 💻😵</div>
+                    </div>
+                </div>
+                <!--End of Scroll Joke Section-->
+
+                <!--Birthday Wishing Wall Section-->
+                <div id="wish-wall-section">
+                    <h2>🎈 Birthday Wishing Wall 🎈</h2>
+                    <p>“If your heart had a wish to send into the sky… what would it be? Just let it go — the sky will do the rest.”</p>
+                    <div id="wish-wall"></div>
+
+                    <div id="wish-input-box">
+                        <input type="text" id="wish-input" placeholder="Write your wish here..." maxlength="100" />
+                        <button id="add-wish-btn">Add Wish</button>
+                    </div>
+                </div>
+                <!--End of Birthday Wishing Wall Section-->
+            </div>
+            <!--End of Last Block Section-->
+        </div>
+        <!--End of Body Section-->
+    </div>
+
+    <!--Revisit Message-->
+    <div class="revisit-message">
+    There’s a quiet kind of magic in skies that wait without asking… and in wishes that don’t end in one visit.
+    </div>
+
+    <!-- Footer-->
+    <footer>
+        <div class="fairy-footer">
+            <div class="base-sparkles"></div>
+            <div class="float-sparkles"></div>
+            <div class="footer-credit">
+            Made with stars, code, and quiet wishes — by Shumaila.
+            </div>
+        </div>
+
+        <div class="footer-blender"></div>
+    </footer>
+    <!--End of Footer-->
+
+
+    <!--Mouse Trail JS-->
+    <script src="JS/mouse-trail.js"></script>
+
+    <!--Footer JS-->
+    <script src="JS/footer.js"></script>
+
+    <!--Count JS-->
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <script type="module" src="JS/count.js"></script>
+
+    <!--Puzzle Animation JS-->
+    <script src="JS/story-anime.js"></script>
+
+    <!--Background Music JS-->
+    <script src="JS/background-music.js"></script>
+    
+    <!--Music JS-->
+    <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+    <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script><script src="JS/music.js"></script>
+
+    <!--Scroll Joke JS-->
+    <script src="JS/scroll-joke.js"></script>
+
+    <!--Wishing Wall Js-->
+    <script src="JS/wish-wall.js"></script>
+
+    <!--Background JS-->
+    <script>console.clear();</script>
+    <script>!function(){function a(a,b){return a.zIndex===b.zIndex?0:a.zIndex<b.zIndex?-1:1}function b(){this.width=this.width?this.width:this.image.width,this.height=this.height?this.height:this.image.height}var c=window,d=document,e=d.documentElement,f=d.body,g=c.requestAnimationFrame||c.mozRequestAnimationFrame||c.webkitRequestAnimationFrame||c.msRequestAnimationFrame||c.oRequestAnimationFrame||function(a){c.setTimeout(a,20)},h=function(){},i={tracking:"scroll",trackingInvert:!1,x:0,y:0,damping:1,canvas:void 0,className:"",parent:document.body,elements:void 0,animating:!0,fullscreen:!0,preRender:h,postRender:h},j=!1,k=0,l=0,m=function(){k=e.scrollLeft||f.scrollLeft,l=e.scrollTop||f.scrollTop},n=!1,o=0,p=0,q=function(a){o=a.touches?a.touches[0].clientX:a.clientX,p=a.touches?a.touches[0].clientY:a.clientY};if(!c.CanvasRenderingContext2D)return c.Canvallax=function(){return!1};c.Canvallax=function s(a){if(!(this instanceof s))return new s(a);var b=this;return s.extend(this,i,a),b.canvas=b.canvas||d.createElement("canvas"),b.canvas.className+=" canvallax "+b.className,b.parent.insertBefore(b.canvas,b.parent.firstChild),b.fullscreen?(b.resizeFullscreen(),c.addEventListener("resize",b.resizeFullscreen.bind(b))):b.resize(b.width,b.height),b.ctx=b.canvas.getContext("2d"),b.elements=[],a&&a.elements&&b.addElements(a.elements),b.damping=!b.damping||b.damping<1?1:b.damping,b.render(),b},Canvallax.prototype={_x:0,_y:0,add:function(b){for(var c=b.length?b:arguments,d=c.length,e=0;d>e;e++)this.elements.push(c[e]);return this.elements.sort(a),this},remove:function(a){var b=this.elements.indexOf(a);return b>-1&&this.elements.splice(b,1),this},render:function(){var a=this,b=0,d=a.elements.length,e=0,f=0,h=a.fullscreen||"pointer"!==a.tracking;for(a.animating&&(a.animating=g(a.render.bind(a))),a.tracking&&("scroll"===a.tracking?(j||(j=!0,m(),c.addEventListener("scroll",m),c.addEventListener("touchmove",m)),a.x=k,a.y=l):"pointer"===a.tracking&&(n||(n=!0,c.addEventListener("mousemove",q),c.addEventListener("touchmove",q)),h||(e=a.canvas.offsetLeft,f=a.canvas.offsetTop,h=o>=e&&o<=e+a.width&&p>=f&&p<=f+a.height),h&&(a.x=-o+e,a.y=-p+f)),a.x=!h||a.trackingInvert!==!0&&"invertx"!==a.trackingInvert?a.x:-a.x,a.y=!h||a.trackingInvert!==!0&&"inverty"!==a.trackingInvert?a.y:-a.y),a._x+=(-a.x-a._x)/a.damping,a._y+=(-a.y-a._y)/a.damping,a.ctx.clearRect(0,0,a.width,a.height),a.preRender(a.ctx,a);d>b;b++)a.ctx.save(),a.elements[b]._render(a.ctx,a),a.ctx.restore();return a.postRender(a.ctx,a),this},resize:function(a,b){return this.width=this.canvas.width=a,this.height=this.canvas.height=b,this},resizeFullscreen:function(){return this.resize(c.innerWidth,c.innerHeight)},play:function(){return this.animating=!0,this.render()},pause:function(){return this.animating=!1,this}},Canvallax.createElement=function(){function a(a){var c=b(a);return a._pointCache&&a._pointChecksum===c||(a._pointCache=a.getTransformPoint(),a._pointChecksum=c),a._pointCache}function b(a){return[a.transformOrigin,a.x,a.y,a.width,a.height,a.size].join(" ")}var c=Math.PI/180,d={x:0,y:0,distance:1,fixed:!1,opacity:1,fill:!1,stroke:!1,lineWidth:!1,transformOrigin:"center center",scale:1,rotation:0,preRender:h,render:h,postRender:h,init:h,crop:!1,getTransformPoint:function(){var a=this,b=a.transformOrigin.split(" "),c={x:a.x,y:a.y};return"center"===b[0]?c.x+=a.width?a.width/2:a.size:"right"===b[0]&&(c.x+=a.width?a.width:2*a.size),"center"===b[1]?c.y+=a.height?a.height/2:a.size:"bottom"===b[1]&&(c.y+=a.height?a.height:2*a.size),c},_render:function(b,d){var e=this,f=e.distance||1,g=d._x,h=d._y,i=a(e);return e.preRender.call(e,b,d),e.blend&&(d.ctx.globalCompositeOperation=e.blend),d.ctx.globalAlpha=e.opacity,d.ctx.translate(i.x,i.y),e.scale===!1?(g*=f,h*=f):d.ctx.scale(f,f),e.fixed||d.ctx.translate(g,h),e.scale!==!1&&d.ctx.scale(e.scale,e.scale),e.rotation&&d.ctx.rotate(e.rotation*c),d.ctx.translate(-i.x,-i.y),e.crop&&(b.beginPath(),"function"==typeof e.crop?e.crop.call(e,b,d):b.rect(e.crop.x,e.crop.y,e.crop.width,e.crop.height),b.clip(),b.closePath()),e.outline&&(b.beginPath(),b.rect(e.x,e.y,e.width||2*e.size,e.height||2*e.size),b.closePath(),b.strokeStyle=e.outline,b.stroke()),e.render.call(e,b,d),this.fill&&(b.fillStyle=this.fill,b.fill()),this.stroke&&(this.lineWidth&&(b.lineWidth=this.lineWidth),b.strokeStyle=this.stroke,b.stroke()),e.postRender.call(e,b,d),e},clone:function(a){var a=Canvallax.extend({},this,a);return new this.constructor(a)}};return function(a){function b(a){return this instanceof b?(Canvallax.extend(this,a),this.init.apply(this,arguments),this):new b(a)}return b.prototype=Canvallax.extend({},d,a),b.prototype.constructor=b,b.clone=b.prototype.clone,b}}(),Canvallax.extend=function(a){a=a||{};var b=arguments.length,c=1;for(1===arguments.length&&(a=this,c=0);b>c;c++)if(arguments[c])for(var d in arguments[c])arguments[c].hasOwnProperty(d)&&(a[d]=arguments[c][d]);return a};var r=2*Math.PI;Canvallax.Circle=Canvallax.createElement({size:20,render:function(a){a.beginPath(),a.arc(this.x+this.size,this.y+this.size,this.size,0,r),a.closePath()}}),Canvallax.Element=Canvallax.createElement(),Canvallax.Image=Canvallax.createElement({src:null,image:null,width:null,height:null,init:function(a){this.image=this.image&&1===this.image.nodeType?this.image:a&&1===a.nodeType?a:new Image,b.bind(this)(),this.image.onload=b.bind(this),this.image.src=this.image.src||a.src||a},render:function(a){this.image&&a.drawImage(this.image,this.x,this.y,this.width,this.height)}});var r=2*Math.PI;Canvallax.Polygon=Canvallax.createElement({sides:6,size:20,render:function(a){var b=this.sides;for(a.translate(this.x+this.size,this.y+this.size),a.beginPath(),a.moveTo(this.size,0);b--;)a.lineTo(this.size*Math.cos(b*r/this.sides),this.size*Math.sin(b*r/this.sides));a.closePath()}}),Canvallax.Rectangle=Canvallax.createElement({width:100,height:100,render:function(a){a.beginPath(),a.rect(this.x,this.y,this.width,this.height),a.closePath()}})}();</script>
+    <script src="JS/background.js"></script>
+
+    <!--Boostrap Popper CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!--Bootstap JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+</body>
+</html>

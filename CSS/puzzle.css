@@ -1,0 +1,494 @@
+body{
+  overflow-x: hidden;
+
+}
+
+.grid {
+  display: none;        /* Hide puzzle from layout initially */
+  opacity: 0;           /* Hide visually */
+  pointer-events: none; /* Prevent interaction */
+  max-width: 90vw;
+  margin: 10vmin auto;
+  display: flex;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  box-shadow: 0px 0px 8vmin 4vmin rgba(0, 0, 0, 0.1), inset 0px 0px 8vmin 4vmin rgba(0, 0, 0, 0.1);
+  perspective: 2000;
+  height: 0;
+  align-self: flex-start;
+}
+
+.grid.reveal {
+  display: flex;
+  height: auto;
+  opacity: 1;
+  pointer-events: auto;
+  animation: sparkle 1s ease-in-out;
+}
+
+.grid:not(.reveal) {
+  pointer-events: none;
+}
+
+.item-box {
+  position: relative;
+  width: 20vmin;
+  height: 20vmin;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all 0.225s cubic-bezier(0.65, 0.05, 0.36, 1) 0.225s;
+}
+.item-box:nth-child(1) .puzzle:before {
+  background-image: url("../img/puzzle-1.png");
+}
+.item-box:nth-child(2) .puzzle:before {
+  background-image: url("../img/puzzle-2.png");
+}
+.item-box:nth-child(3) .puzzle:before {
+  background-image: url("../img/puzzle-3.jpeg");
+}
+.item-box:nth-child(4) .puzzle:before {
+  background-image: url("../img/puzzle-4.jpeg");
+}
+.item-box:nth-child(5) .puzzle:before {
+  background-image: url("../img/puzzle-5.png");
+}
+.item-box:nth-child(6) .puzzle:before {
+  background-image: url("../img/puzzle-6.jpeg");
+}
+.item-box:nth-child(7) .puzzle:before {
+  background-image: url("../img/puzzle-7.jpeg");
+}
+.item-box:nth-child(8) .puzzle:before {
+  background-image: url("../img/puzzle-8.png");
+}
+.item-box:nth-child(9) .puzzle:before {
+  background-image: url("../img/puzzle-9.jpeg");
+}
+.item-box:hover {
+  transform: scale(1.25, 1.25);
+  box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.2);
+}
+.item-box:hover .puzzle {
+  transform: translateX(0) translateY(0) translateZ(1px) rotateX(0) rotateY(0);
+  opacity: 1;
+}
+.item-box .item-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+.piece {
+  position: absolute;
+  width: 10vmin;
+  height: 10vmin;
+  transform-style: preserve-3d;
+}
+.piece:nth-child(1) {
+  transform: translateX(-100%) translateY(-100%) rotate(0deg);
+}
+.piece:nth-child(1) .puzzle:before {
+  background-position: 0% 0%;
+  transform: rotate(0deg);
+}
+.piece:nth-child(2) {
+  transform: translateX(0%) translateY(-100%) rotate(90deg);
+}
+.piece:nth-child(2) .puzzle:before {
+  background-position: 100% 0%;
+  transform: rotate(-90deg);
+}
+.piece:nth-child(3) {
+  transform: translateX(0%) translateY(0%) rotate(180deg);
+}
+.piece:nth-child(3) .puzzle:before {
+  background-position: 100% 100%;
+  transform: rotate(-180deg);
+}
+.piece:nth-child(4) {
+  transform: translateX(-100%) translateY(0%) rotate(270deg);
+}
+.piece:nth-child(4) .puzzle:before {
+  background-position: 0% 100%;
+  transform: rotate(-270deg);
+}
+
+.puzzle {
+  position: absolute;
+  width: 12.9vmin;
+  height: 12.9vmin;
+  background-color: #000;
+  -webkit-clip-path: url(#puzzle);
+          clip-path: url(#puzzle);
+  opacity: .8;
+  transform: translateX(-22.368%) translateY(-22.368%) translateZ(0px) rotateX(0.5turn) rotateY(0.5turn);
+  transition: all 0.45s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.puzzle:before {
+  content: "";
+  position: absolute;
+  width: 12.9vmin;
+  height: 12.9vmin;
+  background-size: 155.264%;
+}
+
+/* New styles for hover text */
+.text-container {
+  position: absolute;
+  left: calc(104% + 2vmin); /* Position to the right of the grid */
+  top: 0;
+  width: 40vmin;
+  height: 60vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevent text from interfering with interactions */
+  z-index: 10;
+}
+
+.text-container span {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 1.7vmin;
+  text-align: center;
+  padding: 2vmin;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.grid:hover .text-container {
+  opacity: 0; /* Hide text when not hovering on any item-box */
+}
+
+.item-box:hover ~ .text-container {
+  opacity: 1; /* Show text when hovering on any item-box */
+}
+
+/* Unique text for each item-box */
+.grid .item-box:nth-child(1):hover ~ .text-container span::after {
+  content: "Puzzle Piece 1: You didn’t complete me. You just found the place inside me that was already shaped like you.";
+}
+.grid .item-box:nth-child(2):hover ~ .text-container span::after {
+  content: "Puzzle Piece 2: You’re not always here but your comfort lingers like something that never left.";
+}
+.grid .item-box:nth-child(3):hover ~ .text-container span::after {
+  content: "Puzzle Piece 3: You didn’t silence the chaos. You just stayed, even when it made no sense.";
+}
+.grid .item-box:nth-child(4):hover ~ .text-container span::after {
+  content: "Puzzle Piece 4: We weren’t two opposites. We were the same puzzle just torn apart, waiting to be found";
+}
+.grid .item-box:nth-child(5):hover ~ .text-container span::after {
+  content: "Puzzle Piece 5: You didn’t fix the broken me. You helped me see the cracks were never something to hide.";
+}
+.grid .item-box:nth-child(6):hover ~ .text-container span::after {
+  content: "Puzzle Piece 6: Distance never stopped the current. You always found a way to stay connected to me.";
+}
+.grid .item-box:nth-child(7):hover ~ .text-container span::after {
+  content: "Puzzle Piece 7: You carried parts of my heart that even I was afraid to hold. And you never made it feel heavy.";
+}
+.grid .item-box:nth-child(8):hover ~ .text-container span::after {
+  content: "Puzzle Piece 8: Everything felt random until you came along and started turning it into meaning.";
+}
+.grid .item-box:nth-child(9):hover ~ .text-container span::after {
+  content: "Puzzle Piece 9: The picture was always mine but you made a part of it light up in a way I never knew it could.";
+}
+
+
+@-webkit-keyframes init {
+  from {
+    transform: translateX(0) translateY(0) translateZ(1px) rotateX(0) rotateY(0);
+  }
+}
+
+@keyframes init {
+  from {
+    transform: translateX(0) translateY(0) translateZ(1px) rotateX(0) rotateY(0);
+  }
+}
+
+/* New Animation Scene Styles */
+.animation-scene {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-90px)
+}
+
+/* Question */
+.question-container {
+  margin-top: 15%;
+  width: 70%;
+}
+
+#question-text {
+  color:#f8f8f8;
+  font-family: "DynaPuff";
+  text-shadow: 1.5px 1.5px 3px #3a7da355;
+  letter-spacing: 0.5px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+#question-text.hidden {
+  opacity: 0;
+}
+
+/* Yes/No Button */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.25rem;
+  font-variation-settings: "wght" 400;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  background: #69B3F0;
+  border: 2px solid currentcolor;
+  box-shadow: inset #3a7da3 0 0 0 2px;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  background-color: #61a3da;
+  box-shadow: 0 0 15px #61a3da, 0 0 20px #61a3da66;
+}
+
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus-visible {
+  outline-offset: 4px;
+}
+
+button:focus-visible,
+button:active {
+  color: white;
+  background-color: #FF9AA2;
+}
+
+/*Floating Qoute Below the Question*/
+.floating-quote {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'DynaPuff', cursive;
+  font-size: 1.4rem;
+  color: #fff6c4;
+  text-shadow: 0 0 10px #ffffff;
+  opacity: 1;
+  animation: floatQuote 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floatQuote {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
+
+/* After-Click Text*/
+.response-text {
+  font-size: 2rem;
+  font-family: Fredoka;
+  color: #ffffffcc;
+/*  opacity: 0; */
+  transition: opacity 0.5s ease;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 2px #00000066;
+  border: #000;
+}
+
+.response-text.show {
+  opacity: 1;
+}
+
+/*Rose & Ball Container*/
+.object-container {
+  position: relative;
+  width: 100%;
+  height: 60vmin;
+  margin: 2rem auto;
+}
+
+/*wilted Rose*/
+.sad-object {
+  position: absolute;
+  width: 20vmin;
+  height: 20vmin;
+  background: url("/img/dead_rose.png") no-repeat center;
+  background-size: contain;
+  opacity: 0;
+  top: 50%;
+  left: 5%; /* far left */
+  transform: translateY(-50%);
+  animation: bounce 0.5s infinite 1;
+  z-index: 1;
+}
+
+.sad-object.show {
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+}
+
+/*Glowing Ball*/
+.glowing-object {
+  position: absolute;
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  top: -10%;
+  right: -10%;
+  transform: translateY(0);
+  opacity: 0;
+  z-index: 2;
+
+  background: radial-gradient(circle at center,
+    rgba(255, 255, 150, 1) 0%,
+    rgba(255, 255, 100, 0.7) 40%,
+    rgba(255, 220, 0, 0.3) 70%,
+    rgba(255, 200, 0, 0) 100%
+  );
+
+  box-shadow:
+    0 0 20px rgba(255, 230, 100, 0.7),
+    0 0 40px rgba(255, 200, 50, 0.6),
+    0 0 80px rgba(255, 180, 50, 0.5);
+}
+.glowing-object.fly-in {
+  animation: flyInFast 0.8s ease-out forwards;
+}
+
+@keyframes flyInFast {
+  0% {
+    top: -20%;
+    right: -20%;
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  20% {
+    top: -10%;
+    right: -10%;
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  40% {
+    top: 30%;
+    right: 30%;
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  60% {
+    top: 40%;
+    right: 50%;
+    transform: scale(1.6);
+    opacity: 1;
+  }
+  80%{
+    top: 50%;
+    right: 80%;
+    transform: scale(1.8);
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    right: 100%;
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/*Blast After Glowing Ball Hits Rose*/
+.explosion {
+  position: absolute;
+  width: 25vmin;
+  height: 25vmin;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+
+  background: radial-gradient(circle at center,
+    rgba(255, 255, 200, 0.9) 0%,
+    rgba(255, 220, 100, 0.6) 40%,
+    rgba(255, 180, 0, 0.2) 70%,
+    rgba(255, 160, 0, 0) 100%
+  );
+
+  filter: blur(8px);
+}
+
+.explosion.boom {
+  animation: boomEffect 0.8s ease-out;
+}
+
+@keyframes boomEffect {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+.paragraph-text {
+  position: absolute;
+  right: 2vmin;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 45vmin;
+  font-size: 2.1vmin;
+  color: #ffffffee;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  font-family:Fredoka;
+  text-shadow: 2px 2px 4px #00000066;
+}
+
+.paragraph-text.show {
+  opacity: 1;
+  animation: typeInFade 2.5s ease-out;
+}
+
+@keyframes typeInFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.grid.reveal {
+  display: flex !important;
+  filter: drop-shadow(0 0 15px white);
+}

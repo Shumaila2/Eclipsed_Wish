@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.counter {
+  position: relative;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  font-size: max(2rem, 1rem + 7vw);
+  font-variation-settings: "wght" var(--font-variation-weight, 600);
+  z-index: -1;
+}
+
+.celebrate {
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-color: #FF6B81;
+  background-image: linear-gradient(45deg, var(--c2), var(--c1), var(--c2));
+  background-size: 200% auto;
+  filter: drop-shadow(rgb(255, 255, 255) 1px 1px 0) drop-shadow(#ffffff 2px 2px 2px);
+  -webkit-animation: bg 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+          animation: bg 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@media (scripting: enabled) {
+  .counter {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .celebrate {
+    -webkit-animation: unset;
+            animation: unset;
+  }
+}
+
+@-webkit-keyframes bg {
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes bg {
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.btn-restart {
+  cursor: pointer;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.25rem;
+  font-variation-settings: "wght" 400;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  background: #69B3F0;
+  border: 2px solid currentcolor;
+  box-shadow: inset #3a7da3 0 0 0 2px;
+  border-radius: 0.25rem;
+}
+
+.btn-restart:hover {
+  background-color: #61a3da;
+  box-shadow: 0 0 15px #61a3da, 0 0 20px #61a3da66;
+}
+
+
+.btn-restart:active {
+  transform: translateY(1px);
+}
+
+.btn-restart:focus-visible {
+  outline-offset: 4px;
+}
+
+.btn-restart:focus-visible,
+.btn-restart:active {
+  color: white;
+  background-color: #FF9AA2;
+}
+
+.secret-line {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: #ffffff;
+  margin-bottom: clamp(2rem, 6vw, 6rem);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* ============================= */
+/* Media Query: Tablets (Portrait)  */
+/* min-width: 577px to max-width: 768px */
+/* ============================= */
+@media (min-width: 577px) and (max-width: 768px){
+  .counter {
+    font-size: max(2rem, 1rem + 5vw);
+  }
+
+  .btn-restart {
+    font-size: 1.05rem;
+    font-variation-settings: "wght" 400;
+    padding: 0.5rem 2rem;
+  }
+}
+
+/* ============================= */
+/* Media Query: Tablets (Landscape) and Small Desktops */
+/* min-width: 769px to max-width: 992px */
+/* ============================= */
+@media (min-width: 769px) and (max-width: 992px){
+  .counter {
+    font-size: max(2rem, 1rem + 5vw);
+  }
+
+  .btn-restart {
+    font-size: 1.10rem;
+    font-variation-settings: "wght" 400;
+    padding: 0.5rem 2rem;
+  }
+}

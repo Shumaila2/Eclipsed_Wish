@@ -1,0 +1,213 @@
+#page-heading{
+    margin-top: 8%;
+}
+
+/*Wind on the Title*/
+.wind-wrapper {
+    position: absolute;
+    top: -100px; /* Adjust this to place it where your title is */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 400px;
+    height: 400px;
+    pointer-events: none; /* High to stay above other elements */
+}
+
+/*Carousel Slider*/
+#carousel-container{
+    margin-top: 15%;
+}
+
+/*Flip Card*/
+#flip-card{
+    padding-top: 10%;
+    padding-left: 80%;
+}
+
+/*Counting Animation*/
+#counting{
+    margin-top: -64%;
+    margin-bottom: 4rem; /* push next section down nicely */
+}
+
+/*Blue Butterflies*/
+#butterfly-section{
+    margin-left: 50%;
+    z-index: 1;
+}
+
+/*Puzzle Section*/
+#puzzle-wrapper {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+    overflow: visible;
+}
+
+/*Puzzle*/
+.puzzle-section {
+    margin-top: -75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: -80%;
+}
+
+.puzzle-section .grid{
+    pointer-events: auto;
+}
+
+
+/* Default spacing when just question is visible */
+#puzzle-wrapper.collapsed {
+    margin-bottom: -30%; /* Reduce gap below */
+    transition: margin 0.5s ease;
+}
+
+/* When puzzle is shown, restore natural spacing */
+#puzzle-wrapper.expanded {
+    margin-bottom: -15%; /* Or however much spacing you want */
+}
+
+/*Floating Qoute Below the Question*/
+.puzzle-decor {
+    transition: opacity 0.6s ease;
+}
+.puzzle-decor.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: scale(1.05);
+}
+
+/*Small Music Button*/
+#music-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+#music-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.revisit-message {
+    text-align: center;
+    font-family: 'DynaPuff', cursive;
+    font-size: 0.8rem;
+    color: #07588a;
+    margin: 40px auto 20px;
+    width: auto;
+    opacity: 0.9;
+}
+
+
+/* ============================= */
+/* Media Query: Mobile Devices  */
+/* (max-width: 576px)           */
+/* ============================= */
+@media (max-width: 576px){
+    #flip-card{
+        padding-top: 10%;
+        padding-left: 50%;
+    }
+
+    #counting{
+        margin-top: 25%;
+        margin-left: 18%;
+    }
+
+    .puzzle-section{
+        margin-top: -80% !important;
+    }
+}
+
+/* ============================= */
+/* Media Query: Tablets (Portrait)  */
+/* min-width: 577px to max-width: 768px */
+/* ============================= */
+@media (min-width: 577px) and (max-width: 768px){
+    #flip-card{
+        padding-top: 10%;
+        padding-left: 85%;
+    }
+
+    #counting{
+        margin-top: -40%;
+        margin-left: -10%;
+    }
+
+    .puzzle-section{
+        margin-left: 9.5% !important;
+    }
+}
+
+/* ============================= */
+/* Media Query: Tablets (Landscape) and Small Desktops */
+/* min-width: 769px to max-width: 992px */
+/* ============================= */
+@media (min-width: 769px) and (max-width: 992px){
+    #flip-card{
+        padding-top: 10%;
+        padding-left: 90%;
+    }
+
+    #counting{
+        margin-top: -75%;
+        margin-left: -18%;
+    }
+    
+    .puzzle-section{
+        margin-left: 10% !important;
+    }
+}
+
+/* ============================= */
+/* Media Query: Medium to Large Desktops */
+/* min-width: 993px to max-width: 1200px */
+/* ============================= */
+@media (min-width: 992px) and (max-width: 1200px){
+    #flip-card{
+        padding-top: 10%;
+        padding-left: 83%;
+    }
+
+    #counting{
+        margin-top: -75%;
+        margin-left: -9%;
+    }
+}
